@@ -11,7 +11,7 @@ export const HeroCard = ({
     return (
         <div className="hero-img">
             <h3>{superhero}</h3>
-            <img src={`./assets/${id}.jpg`} />
+            <img src={`./assets/${id}.jpg`} alt="hero"/>
             <Link to={`./hero/${id}`}>Mas...</Link>
         </div>
     )

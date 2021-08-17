@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { NavBar } from './components/ui/NavBar'
 import { UserContext } from './helpers/UserContext'
 import { AppRouter } from './routers/AppRouter'
 

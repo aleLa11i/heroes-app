@@ -8,7 +8,7 @@ export const Home = () => {
             <h4>
                 Pagina de superheroes hecha por Alesandro Lalli.
             </h4>
-            <img className="foto-yo" src="./assets/yo.jpg" />
+            <img className="foto-yo" src="./assets/yo.jpg" alt="foto-yo"/>
         </div>
     )
 }

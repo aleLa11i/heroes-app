@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { heroes } from '../../data/heroes'
 import { UserContext } from '../../helpers/UserContext'
 import { GetHeroByName } from '../../selectors/GetHeroByName'
 import { HeroCard } from '../heroes/HeroCard'
@@ -15,7 +14,7 @@ export const SearchScreen = () => {
 
     return (
         <div>
-            {(search != "")&&(<h4>Busqueda: { search }</h4>)}
+            {(search !== "")&&(<h4>Busqueda: { search }</h4>)}
 
             <div className="card-columns animate__animated animate__fadeIn">
 

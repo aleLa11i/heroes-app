@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Link, Redirect, useParams } from 'react-router-dom'
+import { Redirect, useParams } from 'react-router-dom'
 import { GetHeroByID } from '../../selectors/GetHeroByID';
 
 export const HeroesScreen = ({history}) => {
@@ -17,7 +17,7 @@ export const HeroesScreen = ({history}) => {
     const handleInput = () => {
 
         if(history.length <=2){
-            (publisher=="Marvel Comics")?history.push("/marvel"):history.push("/dc")
+            (publisher==="Marvel Comics")?history.push("/marvel"):history.push("/dc")
         }
         else
         {history.goBack();}  
@@ -33,7 +33,7 @@ export const HeroesScreen = ({history}) => {
                     <h2>{ alter_ego }</h2>
                     <h5>
                         {
-                            (alter_ego != characters)&&(characters)
+                            (alter_ego !== characters)&&(characters)
                         }
                     </h5>
                     <h5>Primera aparición: {first_appearance}</h5>
