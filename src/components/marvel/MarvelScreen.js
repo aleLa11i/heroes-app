@@ -5,7 +5,7 @@ export const MarvelScreen = () => {
     return (
         <div>
             <h1> Marvel </h1>
-            <HeroesList value={"Marvel Comics"} />
+            <HeroesList value={"Marvel Comics"}/>
         </div>
     )
 }

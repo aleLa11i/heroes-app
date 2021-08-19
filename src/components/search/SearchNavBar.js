@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import { UserContext } from '../../helpers/UserContext'
-
+// import { UserContext } from '../../helpers/UserContext'
+import { SearchContext } from './SearchContext'
 
 
 export const SearchNavBar = () => {
     const history = useHistory()
 
-    const {value,setValue} = useContext(UserContext)
+    const {value,setValue} = useContext(SearchContext)
     
     const  {search} = value
 

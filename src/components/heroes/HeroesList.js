@@ -10,7 +10,7 @@ export const HeroesList = ({value}) => {
         <div className="card-columns animate__animated animate__fadeIn">
             {
                 heroes.map((hero,i)=>{
-                   return <HeroCard {...hero} />
+                   return <HeroCard {...hero} key={i}/>
                 })
             }
         </div>

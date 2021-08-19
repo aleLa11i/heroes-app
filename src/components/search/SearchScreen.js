@@ -1,16 +1,25 @@
 import React, { useContext } from 'react'
-import { UserContext } from '../../helpers/UserContext'
+import { useHistory } from 'react-router-dom'
 import { GetHeroByName } from '../../selectors/GetHeroByName'
+import { AuthContext } from '../auth/AuthContext'
 import { HeroCard } from '../heroes/HeroCard'
+import { SearchContext } from './SearchContext'
 
 export const SearchScreen = () => {
 
-     const {value} = useContext(UserContext)
+     const {value} = useContext(SearchContext)
      const {search} = value;
+     const {state} = useContext(AuthContext)
+     const history = useHistory()
+
+     if(!state.logged){
+
+        localStorage.setItem("lastPath","/search")
+        history.push("/login")
+     }
+
      
      const heroe = GetHeroByName(search)
-
-     console.log(heroe)
 
     return (
         <div>

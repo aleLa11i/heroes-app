@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 export const HeroCard = ({ 
     id, 
     superhero,
@@ -8,6 +9,9 @@ export const HeroCard = ({
     alter_ego, 
     first_appearance, 
     characters }) => {
+
+    
+
     return (
         <div className="hero-img">
             <h3>{superhero}</h3>

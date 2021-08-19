@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { SearchNavBar } from '../search/SearchNavBar'
+import { NavBarLog } from './NavBarLog'
 
 
 export const NavBar = () => {
@@ -36,27 +37,10 @@ export const NavBar = () => {
                     </NavLink>
                 </div>
             </div>
-                    {
-                        <SearchNavBar />
-                    }
-            <div>
-                
-            </div>
 
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-                <ul className="navbar-nav ml-auto">
-                    <NavLink 
-                        activeClassName="active"
-                        className="logout nav-item nav-link" 
-                        exact
-                        to="/login"
-                    >
-                        Logout
-                    </NavLink>
-                </ul>
-            </div>
-        </nav>
-            
+                {    <SearchNavBar />   } 
+                {    <NavBarLog />      }     
+        </nav>   
         </>
     )
 }
